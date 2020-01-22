@@ -61,14 +61,11 @@ MINMAX_TEMPLATE = (TEMPLATE - TPL_MIN) / (TPL_MAX - TPL_MIN)
 class AlignDlib:
     """
     Use `dlib's landmark estimation <http://blog.dlib.net/2014/08/real-time-face-pose-estimation.html>`_ to align faces.
-
     The alignment preprocess faces for input into a neural network.
     Faces are resized to the same size (such as 96x96) and transformed
     to make landmarks (such as the eyes and nose) appear at the same
     location on every image.
-
     Normalized landmarks:
-
     .. image:: ../images/dlib-landmark-mean.png
     """
 
@@ -79,7 +76,6 @@ class AlignDlib:
     def __init__(self, facePredictor):
         """
         Instantiate an 'AlignDlib' object.
-
         :param facePredictor: The path to dlib's
         :type facePredictor: str
         """
@@ -91,7 +87,6 @@ class AlignDlib:
     def getAllFaceBoundingBoxes(self, rgbImg):
         """
         Find all face bounding boxes in an image.
-
         :param rgbImg: RGB image to process. Shape: (height, width, 3)
         :type rgbImg: numpy.ndarray
         :return: All face bounding boxes in an image.
@@ -109,7 +104,6 @@ class AlignDlib:
     def getLargestFaceBoundingBox(self, rgbImg, skipMulti=False):
         """
         Find the largest face bounding box in an image.
-
         :param rgbImg: RGB image to process. Shape: (height, width, 3)
         :type rgbImg: numpy.ndarray
         :param skipMulti: Skip image if more than one face detected.
@@ -128,7 +122,6 @@ class AlignDlib:
     def findLandmarks(self, rgbImg, bb):
         """
         Find the landmarks of a face.
-
         :param rgbImg: RGB image to process. Shape: (height, width, 3)
         :type rgbImg: numpy.ndarray
         :param bb: Bounding box around the face to find landmarks for.
@@ -146,9 +139,7 @@ class AlignDlib:
               landmarks=None, landmarkIndices=INNER_EYES_AND_BOTTOM_LIP,
               skipMulti=False):
         r"""align(imgDim, rgbImg, bb=None, landmarks=None, landmarkIndices=INNER_EYES_AND_BOTTOM_LIP)
-
         Transform and align a face in an image.
-
         :param imgDim: The edge length in pixels of the square the image is resized to.
         :type imgDim: int
         :param rgbImg: RGB image to process. Shape: (height, width, 3)
