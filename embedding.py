@@ -1,3 +1,8 @@
+'''This code is for Embedding face
+ author : Hyunah Oh
+ data : 2020.01.22
+ flow : Detection -> Alignment -> Normalization -> Embedding(load pretrained) -> Training Classification
+'''
 import numpy as np
 import cv2
 

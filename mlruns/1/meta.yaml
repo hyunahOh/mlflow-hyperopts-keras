@@ -1,0 +1,4 @@
+artifact_location: file:///root/face-recognition/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: this_is_experiment_name

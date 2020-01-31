@@ -1,0 +1,15 @@
+artifact_uri: file:///root/face-recognition/mlruns/2/0c75a2fb64e64940a2d7a03b51287cfd/artifacts
+end_time: 1580398528305
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+name: ''
+run_id: 0c75a2fb64e64940a2d7a03b51287cfd
+run_uuid: 0c75a2fb64e64940a2d7a03b51287cfd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1580398526078
+status: 3
+tags: []
+user_id: root
